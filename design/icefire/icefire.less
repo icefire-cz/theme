@@ -10,7 +10,9 @@
 }
 
 body {
-  background: @bodyBackground url("@{imageDirectory}/icefire_background.jpg") no-repeat top;
+  background: url("@{imageDirectory}/icefire_background.jpg") no-repeat top,
+              url("@{imageDirectory}/icefire_background_2.jpg") repeat-x top
+              @bodyBackground;
 }
 
 a:hover {
@@ -66,7 +68,7 @@ pre {
         padding-top: 13px;
         padding-bottom: 14px;
         color: @white;
-        text-shadow: 0 1px 0 rgba(255,255,255,0.2);
+        text-shadow: 0 1px 0 rgba(255, 255, 255, 0.2);
       }
       &.open,
       &.active {
@@ -110,7 +112,7 @@ pre {
   font-size: @baseFontSize - 1;
   min-width: 110px;
   border-radius: 3px;
-  .box-shadow(0 2px 5px rgba(0,0,0,0.2));
+  .box-shadow(0 2px 5px rgba(0, 0, 0, 0.2));
 }
 
 textarea,
@@ -525,6 +527,9 @@ h2.CommentHeading {
     &.CheckBoxColumn {
       padding-right: 0;
       padding-left: 4px;
+    }
+    &.BigCount {
+      width: 75px;
     }
   }
   &.CategoryTable tbody td {
